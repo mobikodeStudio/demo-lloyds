@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.sapient.lloyds_android_demo.presentation.landing.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landingFragment_to_movieDetialsFragment"
+            app:destination="@id/movieDetialsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetialsFragment"
+        android:name="com.sapient.lloyds_android_demo.presentation.moviedetails.MovieDetailsFragment"
+        android:label="fragment_movie_detials"
+        tools:layout="@layout/fragment_movie_detials" >
+        <argument
+            android:name="movieId"
+            app:argType="long" />
+    </fragment>
+</navigation>
